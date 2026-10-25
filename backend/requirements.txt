@@ -1,0 +1,17 @@
+# Web service
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Vehicle link and manual control
+pyserial
+pygame
+
+# Vision pipeline
+# torch: this line installs the CPU build. For an NVIDIA GPU, install the CUDA
+# build first from https://pytorch.org/get-started/locally/, then run this file.
+torch
+numpy
+opencv-python
+ultralytics          # AGPL-3.0, see the licence note in README.md
+deep-sort-realtime

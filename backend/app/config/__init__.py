@@ -1,0 +1,2 @@
+SERIAL_PORT = "COM14"   # change port
+SERIAL_BAUD = 9600
