@@ -109,9 +109,13 @@ does not suit. deep-sort-realtime is MIT.
 
 ## Credits
 
-Built by John Obaloluwa Ayodele and the Mission Unified team, Department of Aerospace
-Engineering, Faculty of Air Engineering, Air Force Institute of Technology, Kaduna.
-Supervised by Engr Rexcharles Enyinna Donatus.
+Written by [John Obaloluwa Ayodele](https://github.com/Official-John), Department of
+Aerospace Engineering, Faculty of Air Engineering, Air Force Institute of Technology,
+Kaduna. Supervised by Engr Rexcharles Enyinna Donatus.
+
+The platform this runs on was built by [Mission Unified](https://github.com/Mission-Unified):
+John Obaloluwa Ayodele, [Divine Ehmoyi Waziri](https://github.com/Mr-Gold04) and
+[Oluwapelumi Temitayo Falade](https://github.com/faladeemmanuel55-ai).
 
 Project overview, photographs and the documentary:
 [Mission-Unified/mission-unified](https://github.com/Mission-Unified/mission-unified).
