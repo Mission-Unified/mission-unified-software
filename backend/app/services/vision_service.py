@@ -1,5 +1,6 @@
 import asyncio
 import base64
+import os
 import cv2
 import torch
 import time
@@ -18,7 +19,12 @@ PIXEL_TO_METER = 0.05
 DIRECTION_THRESHOLD = 3
 
 MODEL_NAME = "yolo11n.pt"
-STREAM_SOURCE = "videos/Testvid6.mp4"
+# Video arrives from the RunCam WiFiLink 2 over its own wifi network. 192.168.1.10 is
+# the module's default address and root/12345 its default login, both published by
+# RunCam, so change them on the device before flying on a shared network.
+# Set the STREAM_SOURCE environment variable to use a file, another camera, or a
+# local webcam index instead of editing this line.
+STREAM_SOURCE = os.environ.get("STREAM_SOURCE", "rtsp://root:12345@192.168.1.10/stream=0")
 
 IMG_SIZE = 320
 FRAME_WIDTH = 640
@@ -105,7 +111,9 @@ class VisionService:
 
         self.running = True
 
-        cap = cv2.VideoCapture(STREAM_SOURCE)
+        # a bare number means a locally attached camera, anything else is a path or URL
+        source = int(STREAM_SOURCE) if STREAM_SOURCE.isdigit() else STREAM_SOURCE
+        cap = cv2.VideoCapture(source)
 
         if not cap.isOpened():
             print("❌ Cannot open video stream")
